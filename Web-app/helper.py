@@ -1,3 +1,3 @@
 url = "http://numbersapi.com/"
-Device_ID = "Your device-id"
-API_KEY = "your api-key"
+Device_ID = "Your bolt device-id"
+API_KEY = "Your bolt api-key"

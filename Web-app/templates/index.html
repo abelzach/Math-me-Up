@@ -125,11 +125,14 @@
             <div class="card">
                 <div class="card-body">
                 <h5 style="font-size: 35px">{{qtn["qn"]}}</h5>
-                <h6 style="font-size: 25px" id="tl">Time limit :{{qtn["timelimit"]}}</h6>
+                <br/>
+                <h6 style="font-size: 25px" id="tl">Recommended Time limit :{{qtn["timelimit"]}} seconds</h6>
+                <br/>
                 <button class="btn btn-success" onclick="timeit('{{qtn["timelimit"]}}')">Attempt</button>            
                 </div>  
             </div>    
     </div>
+    <br/><br/>
     {% endfor %}
     {% else %}
     <p>Sorry..No questions for you at this moment</p>
