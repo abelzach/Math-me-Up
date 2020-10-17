@@ -27,8 +27,10 @@ def index():
 
 @app.route("/add", methods = ["GET" , "POST"])
 def addqn():
+    n = str(random.randint(0,100))
+    response = requests.get(url+n)
     if request.method == "GET":
-        return render_template("addqn.html")
+        return render_template("addqn.html", fact=response.text)
     else:
         qstn = request.form.get("question")
         tl = request.form.get("time")

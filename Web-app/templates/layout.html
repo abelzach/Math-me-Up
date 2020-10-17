@@ -2,6 +2,9 @@
 <html lang="en">
 
   <head>
+    <link rel = "icon" href =  
+    "/static/images/images.jfif" 
+            type = "image/x-icon"> 
 
     
     <title>Math-me-Up</title>
@@ -62,16 +65,20 @@
 
     <main class="container p-5">{% block main %} {% endblock %}</main>
 
+    <div class="card bg-info text-white">
+        <div class="card-body">
+            <center>
+                <h3>Did you know? </h3>
+            <h4>{{fact}}</h4>
+            </center>
+        </div>
+      </div>
+    
     <section class="section" id="testimonials">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">                    
-                    <div class="card">
-                            <div class="card-body">
-                              {{fact}}
-                            </div>
-                    </div>            
-                </div>
+                
+                
                 <br/><br/><br/>
                 <div class="card" style="width: 18rem;">
                     <img src="../static/images/slide-01.jpg" alt="..."  class="rounded float-right" width="400" height="300">
@@ -91,7 +98,8 @@
             <div class="row">
                 <div class="col-lg-6 col-xs-12">
                     <div class="left-text-content">
-				        <p>Exclusive project made by Abel and Athul for hackrithmetic</p>
+                        <p>Exclusive project made by Abel and Athul for hackrithmetic</p>
+                        <p>© 2020 Math-me-Up </p>
                     </div>
                 </div>                
             </div>
