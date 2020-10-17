@@ -1,6 +1,18 @@
 {% extends "layout.html" %}
 {% block main %}
 
+<script>
+    setKey('{{API_KEY}}','{{Device_ID}}');
+    function timeit(lim) {
+        setTimeout(function() {
+        digitalWrite(0,'HIGH') }, lim*1000);
+        setTimeout(function() {
+        digitalWrite(0,'LOW')  }, lim*1000+2000);
+    }
+    function printit2() {
+        console.log("Hey");
+    }
+</script>
 <section class="section" id="/">
 <div class="container">
     <div class="row">
@@ -73,13 +85,13 @@
             <center>
             <form method="post" action = "/">
                 <h2 class="text-warning">Choose your preffered difficulty level</h2>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="exampleFormControlSelect1" name="difficulty">
                     <option value="Easy">Easy</option>
                     <option value="Moderate">Moderate</option>
                     <option value="Difficult">Difficult</option>
                   </select>
                 <h2 class="text-warning">Choose the topic </h2>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="exampleFormControlSelect1" name="topic">
                     <option value="Arithmetic">Arithmetic</option>
                     <option value="Algebra">Algebra</option>
                     <option value="Trigonometry">Trigonometry</option>
@@ -98,21 +110,30 @@
 <br/><br/><br/><br/><br/><br/><br/>
 
 <span class="d-block p-2 bg-dark text-white">Answer the questions within the assigned time</span>
-
-<section class="section" id="projects">
-<div class="container">
-<div class="row">
-    <div class="col-lg-3">
-        <div class="section-heading">
-            <div class="shadow p-3 mb-5 bg-white rounded">
-                <h2>Questions  </h2>
-            </div>
-            
-        </div>
-        
-    
+<br/><br/>
+<hr/>
+<br/><br/>
+<section class="section" id="questions">
+    <div class="section-heading">
+        <center><h2 style="color: cornflowerblue;">Questions</h2></center>
     </div>
-</div>
+<br/><br/>   
+<div class="container">
+    {% if Qndata %}
+    {% for qtn in Qndata %}
+    <div class="row">
+            <div class="card">
+                <div class="card-body">
+                <p style="font-size: 40px">{{qtn["qn"]}}</p>
+                <p style="font-size: 15px" id="tl">{{qtn["timelimit"]}}</p>
+                <button class="btn btn-success" onclick="timeit('{{qtn["timelimit"]}}')">Attempt</button>            
+                </div>  
+            </div>    
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No questions for Ya!</p>
+    {% endif %}
 </div>
 </section>
 
