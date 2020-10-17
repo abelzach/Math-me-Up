@@ -27,8 +27,10 @@
                  
                 </div>
                 <div class="features-content">
-                    <h4>Difficulty</h4>
-                    <p>Choose your difficulty level</p>
+                    <div class="badge badge-secondary text-wrap" style="width: 6rem;">
+                         <h4>Difficulty</h4>
+                      </div>
+                    <p class="text-monospace">Choose your preffered difficulty level</p>
                 </div>
             </div>
         </div>
@@ -38,8 +40,10 @@
                   
                 </div>
                 <div class="features-content">
-                    <h4>Type</h4>
-                    <p>Choose the area under mathematics where you want the question</p>
+                    <div class="badge badge-secondary text-wrap" style="width: 6rem;">
+                        <h4>Type</h4>
+                     </div>
+                    <p class="text-monospace">Choose the area under mathematics where you want the question</p>
                     
                 </div>
             </div>
@@ -50,8 +54,10 @@
                     
                 </div>
                 <div class="features-content">
-                    <h4>Time</h4>
-                    <p>Solve the problem in the assigned time</p>
+                    <div class="badge badge-secondary text-wrap" style="width: 6rem;">
+                        <h4>Time</h4>
+                     </div>
+                    <p class="text-monospace">Solve the question in the assignedtime</p>
                     
                 </div>
             </div>
@@ -59,6 +65,7 @@
     </div>
 </div>
 </section>
+<span class="d-block p-2 bg-primary text-white">Are you ready for Math-me-Up?</span>
 
 <section class="section" id="subscribe">
 <div class="container">
@@ -66,26 +73,31 @@
         <div class="col-lg-8 offset-lg-2">
             <div class="section-heading">
              
-                <h2>Choose your preffered difficulty level and the topic </h2>
-    <form>
-         <label for="level">Choose the difficulty level :</label>
-  		<select name="level" id="level">
-    		<option value="e">Easy</option>
-    		<option value="m">Medium</option>
-    		<option value="h">Hard</option>
-  		</select>
-  		<br><br>
-       <h2>Choose the type of question </h2>
-  		<label for="maths">Choose an option :</label>
-  		<select name="maths" id="maths">
-    		<option value="cal">Calculus</option>
-    		<option value="set">Sets</option>
-    		<option value="prob">Probability</option>
-  		<option value="equ">Equations</option>
-  		</select>
-  		<br><br>
-  		<input type="submit" value="Submit">
-	</form>
+                <h2 class="text-warning">Choose your preffered difficulty level and the topic </h2>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Difficulty Level
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" value="e">Easy</a>
+                      <a class="dropdown-item" value="m">Medium</a>
+                      <a class="dropdown-item" value="h">Hard</a>
+                    </div>
+                  </div>
+       <h2 class="text-warning">Choose the type of question </h2>
+       <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Type
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" value="s">Sets</a>
+          <a class="dropdown-item" value="p">Probability</a>
+          <a class="dropdown-item" value="c">Calculus</a>
+          <a class="dropdown-item" value="e">Equations</a>
+        </div>
+      </div>
+      <br><br><br><br><br>
+      <button type="button" class="btn btn-success">Submit</button>
 
             </div>
             
@@ -94,13 +106,17 @@
 </div>
 </section>
 
+<span class="d-block p-2 bg-dark text-white">Answer the questions within the assigned time</span>
+
 <section class="section" id="projects">
 <div class="container">
 <div class="row">
     <div class="col-lg-3">
         <div class="section-heading">
-           
-            <h2>Questions : </h2>
+            <div class="shadow p-3 mb-5 bg-white rounded">
+                <h2>Questions  </h2>
+            </div>
+            
         </div>
         
     

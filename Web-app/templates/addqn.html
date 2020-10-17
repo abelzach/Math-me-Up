@@ -1,33 +1,47 @@
 {% extends "layout.html" %}
 {% block main %}
+<div class="shadow p-3 mb-5 bg-white rounded">
+	<h1 class="text-primary" >Add your questions</h1>
+</div>
 
-<h1>Add your questions</h1>
-<form>
-  <label for="question">Enter question: </label>
-  <input type="text" id="question" name="question"><br><br>
-  <label for="ans">Answer: </label>
-  <input type="text" id="ans" name="ans"><br><br>
+<div class="input-group mb-3">
+	<div class="input-group-prepend">
+	  <span class="input-group-text" id="ques">Enter question : </span>
+	</div>
+	<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+	<div class="input-group-prepend">
+	  <span class="input-group-text" id="ans">Time (seconds) : </span>
+	</div>
+	<input type="int" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
   
-  <p>Enter the type of mathematics field : </p>
-  		<label for="maths">Choose an option :</label>
-  		<select name="maths" id="maths">
-    		<option value="cal">Calculus</option>
-    		<option value="set">Sets</option>
-    		<option value="prob">Probability</option>
-  		<option value="equ">Equations</option>
-  		</select>
-  		<br><br>
-  	
-  		<label for="level">Choose the difficulty level :</label>
-  		<select name="level" id="level">
-    		<option value="e">Easy</option>
-    		<option value="m">Medium</option>
-    		<option value="h">Hard</option>
-  		</select>
-  		<br><br>
-  		<input type="submit" value="Submit">
-</form>
-
+        <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Difficulty Level
+            </button>
+        	<div class="dropdown-menu">
+                <a class="dropdown-item" value="e">Easy</a>
+                <a class="dropdown-item" value="m">Medium</a>
+                <a class="dropdown-item" value="h">Hard</a>
+            </div>
+		</div>
+		<br>
+		<br>
+       <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Type
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" value="s">Sets</a>
+          <a class="dropdown-item" value="p">Probability</a>
+          <a class="dropdown-item" value="c">Calculus</a>
+          <a class="dropdown-item" value="e">Equations</a>
+        </div>
+      </div>
+      <br><br><br>
+      <button type="button" class="btn btn-success">Submit</button>
   
 
 
