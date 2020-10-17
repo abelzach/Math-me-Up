@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block main %}
 
-<section class="section" id="about">
+<section class="section" id="/">
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-xs-12">
@@ -68,13 +68,24 @@
              
                 <h2>Choose your preffered difficulty level and the topic </h2>
     <form>
-          <input type="radio" id="e" name="easy" >
-          <label for="e">EASY</label><br>
-          <input type="radio" id="m" name="medium">
-          <label for="m">MEDIUM</label><br>
-          <input type="radio" id="h" name="hard">
-          <label for="h">HARD</label>
-    </form> 
+         <label for="level">Choose the difficulty level :</label>
+  		<select name="level" id="level">
+    		<option value="e">Easy</option>
+    		<option value="m">Medium</option>
+    		<option value="h">Hard</option>
+  		</select>
+  		<br><br>
+       <h2>Choose the type of question </h2>
+  		<label for="maths">Choose an option :</label>
+  		<select name="maths" id="maths">
+    		<option value="cal">Calculus</option>
+    		<option value="set">Sets</option>
+    		<option value="prob">Probability</option>
+  		<option value="equ">Equations</option>
+  		</select>
+  		<br><br>
+  		<input type="submit" value="Submit">
+	</form>
 
             </div>
             
