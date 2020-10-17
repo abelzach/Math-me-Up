@@ -1,48 +1,45 @@
 {% extends "layout.html" %}
 {% block main %}
 <div class="shadow p-3 mb-5 bg-white rounded">
-	<h1 class="text-primary" >Add your questions</h1>
+  <center>
+    <h1 class="text-primary">Add your questions</h1>
+  </center>
 </div>
 
-<div class="input-group mb-3">
-	<div class="input-group-prepend">
-	  <span class="input-group-text" id="ques">Enter question : </span>
-	</div>
-	<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-  </div>
+
+<form action="/add" method="post">
   <div class="input-group mb-3">
-	<div class="input-group-prepend">
-	  <span class="input-group-text" id="ans">Time (seconds) : </span>
-	</div>
-	<input type="int" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="ques">Enter question : </span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required/>
   </div>
-  
-        <div class="btn-group">
-            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Difficulty Level
-            </button>
-        	<div class="dropdown-menu">
-                <a class="dropdown-item" value="e">Easy</a>
-                <a class="dropdown-item" value="m">Medium</a>
-                <a class="dropdown-item" value="h">Hard</a>
-            </div>
-		</div>
-		<br>
-		<br>
-       <div class="btn-group">
-        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Type
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" value="s">Sets</a>
-          <a class="dropdown-item" value="p">Probability</a>
-          <a class="dropdown-item" value="c">Calculus</a>
-          <a class="dropdown-item" value="e">Equations</a>
-        </div>
-      </div>
-      <br><br><br>
-      <button type="button" class="btn btn-success">Submit</button>
-  
+  <br/>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="ans">Time (seconds) : </span>
+    </div>
+    <input type="int" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required/>
+  </div>
+  <p>Topic</p>
+  <select class="form-control" id="exampleFormControlSelect1" name="topic">
+    <option value="Easy">Easy</option>
+    <option value="Moderate">Moderate</option>
+    <option value="Difficult">Difficult</option>
+  </select>
+  <p>Level of difficulty</p>
+  <select class="form-control" id="exampleFormControlSelect1" name="difficulty">
+      <option value="Arithmetic">Arithmetic</option>
+      <option value="Algebra">Algebra</option>
+      <option value="Trigonometry">Trigonometry</option>
+      <option value="Calculus">Calculus</option>
+      <option value="Geometry">Geometry</option>
+  </select>
+  <br/>
+    <center>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </center>
+</form> 
 
 
 {% endblock %}
