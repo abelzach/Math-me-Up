@@ -12,14 +12,14 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="ques">Enter question : </span>
     </div>
-    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required/>
+    <input type="text" class="form-control" name="question" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required/>
   </div>
   <br/>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="ans">Time (seconds) : </span>
     </div>
-    <input type="int" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required/>
+    <input type="int" class="form-control" name="time" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required/>
   </div>
   <p>Topic</p>
   <select class="form-control" id="exampleFormControlSelect1" name="topic">
@@ -27,6 +27,7 @@
     <option value="Moderate">Moderate</option>
     <option value="Difficult">Difficult</option>
   </select>
+  <br/>
   <p>Level of difficulty</p>
   <select class="form-control" id="exampleFormControlSelect1" name="difficulty">
       <option value="Arithmetic">Arithmetic</option>
