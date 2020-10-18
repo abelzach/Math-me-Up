@@ -2,6 +2,12 @@
 
 ### By Abel Simon and Athul Sanjose
 
+<br/>
+
+![mainpic](pic.jpeg?raw=true)
+
+<br/>
+
 Mathematics is fundamental for many professions, especially science, technology, and engineering. Yet, mathematics is often perceived as difficult by most students. Studying math through e-learning medium and physical interactive medium can supplement the traditional textbook learning, and so we came up with the idea of Math-me-Up. It provides a Web-App with a collection of mathematical problems of various levels of difficulty from different branches of mathematics. An IoT-based device helps the user to solve these problems within the recommended time limit of each question, thereby improving their cognitive and mathematical-problem solving capabilities. The user also has the option to contribute questions for the greater good and help other students in search of questions for a particular topic. 
 
 <br/>
