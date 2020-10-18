@@ -4,7 +4,7 @@
 
 <br/>
 
-![mainpic](pic.jpeg?raw=true)
+![mainpic](pic.jpg?raw=true)
 
 <br/>
 
